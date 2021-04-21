@@ -1,9 +1,10 @@
 <template>
   <div>
-    <form>
+    <form @submit.prevent="userLogin">
       <h3 class="form-header">Login</h3>
       <div class="input-wrapper">
         <input
+          v-model="email"
           class="input-email"
           type="email"
           placeholder="Enter your email"
@@ -11,14 +12,25 @@
         />
       </div>
       <div class="btn-wrapper">
-        <Button class="btn-submit"> Send Magic Link </Button>
+        <button type="submit" class="btn-submit">Send Magic Link</button>
       </div>
     </form>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      email: '',
+    }
+  },
+  methods: {
+    userLogin() {
+      console.log(this.email)
+    },
+  },
+}
 </script>
 
 <style>

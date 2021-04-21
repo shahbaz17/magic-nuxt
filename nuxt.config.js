@@ -33,4 +33,29 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  // https://auth.nuxtjs.org/schemes/local
+  auth: {
+    strategies: {
+      local: {
+        token: {
+          property: 'token',
+          // required: false,
+          type: false,
+        },
+        user: {
+          property: 'user',
+          // autoFetch: true
+        },
+        endpoints: {
+          login: { url: '/api/login', method: 'post' },
+          logout: { url: '/api/logout', method: 'post' },
+          user: { url: '/api/user', method: 'get' },
+        },
+      },
+    },
+  },
+
+  // https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-servermiddleware
+  serverMiddleware: [{ path: '/api', handler: '~/server-middleware/auth.js' }],
 }

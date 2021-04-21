@@ -4,14 +4,21 @@
       <ul>
         <li><NuxtLink to="/">Home</NuxtLink></li>
         <li><NuxtLink to="/profile">Profile</NuxtLink></li>
-        <li><a class="logout">Logout</a></li>
+        <li><a class="logout" @click="userLogout">Logout</a></li>
       </ul>
     </nav>
   </header>
 </template>
 
 <script>
-export default {}
+export default {
+  methods: {
+    async userLogout() {
+      await this.$auth.logout()
+      this.$router.push('/login')
+    },
+  },
+}
 </script>
 
 <style>

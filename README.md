@@ -1,5 +1,7 @@
 # Magic Nuxt Demo
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fshahbaz17%2Fmagic-nuxt&env=NUXT_ENV_MAGIC_PUBLISHABLE_KEY,MAGIC_SECRET_KEY)
+
 Live at https://magic-nuxt.vercel.app/login
 
 # Quick Start Instructions

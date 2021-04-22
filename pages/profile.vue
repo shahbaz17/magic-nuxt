@@ -1,12 +1,13 @@
 <template>
   <div class="container">
     <div class="label">Email</div>
-    <div class="profile-info">shahbaz@magic.link</div>
+    <div class="profile-info">{{ $auth.user.email }}</div>
 
-    <div class="label">User Id</div>
-    <div class="profile-info">
-      did:ethr:0xa7dd0fcC2716E083063f6CFd62E3EF5dCe4e4E1B
-    </div>
+    <div class="label">Issuer</div>
+    <div class="profile-info">{{ $auth.user.issuer }}</div>
+
+    <div class="label">Public Address</div>
+    <div class="profile-info">{{ $auth.user.publicAddress }}</div>
   </div>
 </template>
 

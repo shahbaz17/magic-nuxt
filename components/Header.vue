@@ -1,13 +1,10 @@
 <template>
   <header>
     <nav>
-      <ul v-if="$auth.loggedIn">
+      <ul>
         <li><NuxtLink to="/">Home</NuxtLink></li>
         <li><NuxtLink to="/profile">Profile</NuxtLink></li>
         <li><a class="logout" @click="userLogout">Logout</a></li>
-      </ul>
-      <ul v-else>
-        <li><a class="logout">Magic Nuxt Demo</a></li>
       </ul>
     </nav>
   </header>
@@ -18,7 +15,7 @@ export default {
   methods: {
     async userLogout() {
       await this.$auth.logout()
-      this.$router.push('/login')
+      this.$router.go('/login')
     },
   },
 }

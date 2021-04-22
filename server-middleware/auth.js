@@ -1,8 +1,11 @@
 var express = require('express')
+var cors = require('cors')
 var app = express()
 
 const { Magic } = require('@magic-sdk/admin')
 const mAdmin = new Magic(process.env.MAGIC_SECRET_KEY)
+
+app.use(cors())
 
 app.use(
   express.urlencoded({

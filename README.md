@@ -9,9 +9,11 @@ Live at https://magic-nuxt.vercel.app/login
 ```bash
 $ git clone https://github.com/shahbaz17/magic-nuxt
 $ cd magic-nuxt
-$ mv .env.example .env // enter your Magic API keys in your env variables
+$ mv .env.example .env
+# enter your Magic API keys in your env variables
 $ yarn install
-$ yarn dev // starts app at http://localhost:3000
+$ yarn dev
+# starts app at http://localhost:3000
 ```
 
 ## Environment Variables
@@ -20,6 +22,12 @@ $ yarn dev // starts app at http://localhost:3000
 NUXT_ENV_MAGIC_PUBLISHABLE_KEY=pk_test_
 MAGIC_SECRET_KEY=sk_test_
 ```
+
+## Get your Magic Keys
+
+Sign Up with [Magic](https://dashboard.magic.link/signup) and get your `NUXT_ENV_MAGIC_PUBLISHABLE_KEY` and `MAGIC_SECRET_KEY`
+
+![Dashboard Image](https://dev-to-uploads.s3.amazonaws.com/i/fnjqvscslu11ih87p94t.png)
 
 ## Build Setup
 

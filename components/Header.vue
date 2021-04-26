@@ -1,10 +1,15 @@
 <template>
   <header>
     <nav>
-      <ul>
+      <ul v-if="$auth.loggedIn">
         <li><NuxtLink to="/">Home</NuxtLink></li>
         <li><NuxtLink to="/profile">Profile</NuxtLink></li>
         <li><a class="logout" @click="userLogout">Logout</a></li>
+      </ul>
+      <ul v-else>
+        <li>
+          <a class="logout">Magic Nuxt Demo</a>
+        </li>
       </ul>
     </nav>
   </header>

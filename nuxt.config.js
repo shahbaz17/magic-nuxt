@@ -57,5 +57,5 @@ export default {
   },
 
   // https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-servermiddleware
-  serverMiddleware: [{ path: '/api', handler: '~/server-middleware/auth.js' }],
+  serverMiddleware: [{ path: '/api', handler: '~/api/auth.js' }],
 }

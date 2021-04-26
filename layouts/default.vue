@@ -5,6 +5,8 @@
   </div>
 </template>
 
+</script>
+
 <style>
 *,
 *::before,
